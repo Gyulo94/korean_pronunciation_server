@@ -17,4 +17,4 @@ COPY --from=builder /app/package*.json ./
 
 EXPOSE 8000
 
-CMD ["node", "start"]
+CMD ["node", "server"]
