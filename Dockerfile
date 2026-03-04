@@ -8,13 +8,6 @@ RUN npm install
 
 COPY . .
 
-FROM node:20-alpine
-
-WORKDIR /app
-
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package*.json ./
-
 EXPOSE 8000
 
-CMD npm run start
+CMD ["node", "server.js"]
